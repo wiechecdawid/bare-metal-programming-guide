@@ -1,4 +1,4 @@
 **/*.bin
 **/*.elf
 **/*.elf.map
-**/*.o
+**/main.o
