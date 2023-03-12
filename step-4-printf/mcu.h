@@ -85,9 +85,9 @@ static inline void uart_init(struct uart *uart, unsigned long baud) {
   if (uart == UART2) RCC->APB1ENR |= BIT(17);
   if (uart == UART3) RCC->APB1ENR |= BIT(18);
 
-  if (uart == UART1) tx = PIN('A', 9), rx = PIN('A', 10);
+  if (uart == UART1) tx = PIN('B', 9), rx = PIN('B', 10);
   if (uart == UART2) tx = PIN('A', 2), rx = PIN('A', 3);
-  if (uart == UART3) tx = PIN('D', 8), rx = PIN('D', 9);
+  if (uart == UART3) tx = PIN('C', 10), rx = PIN('C', 11);
 
   gpio_set_mode(tx, GPIO_MODE_AF);
   gpio_set_af(tx, af);
